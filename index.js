@@ -29,7 +29,7 @@ var cangjie = {
 
 function toCangjie(string) {
   var out = [];
-  string.split("").forEach(function(l){
+  string.toUpperCase().split("").forEach(function(l){
     out.push( cangjie[l] || l );  
   });
   return out.join("");

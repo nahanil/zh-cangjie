@@ -7,6 +7,10 @@ describe('#toCanjie', function() {
     cangjie.toCangjie("MGILG").should.equal("一土戈中土");
   });
 
+  it('should be case insensitive', function() {
+    cangjie.toCangjie("MgilG").should.equal("一土戈中土");
+  });
+
   it('should convert I to 戈', function() {
     cangjie.toCangjie("I").should.equal("戈");
   });
