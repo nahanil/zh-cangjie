@@ -22,6 +22,11 @@ describe('#toCanjie', function() {
   it('should ignore unknown characters', function(){
     cangjie.toCangjie("O!NF?").should.equal("人!弓火?");
   });
+
+  it('should return nothing when given nothing', function(){
+    should.not.exist(cangjie.toCangjie());
+  });
+
 });
 
 describe('#fromCanjie', function() {
@@ -40,5 +45,10 @@ describe('#fromCanjie', function() {
   it('should ignore unknown characters', function(){
     cangjie.fromCangjie("人!弓火?").should.equal("O!NF?");
   });
+
+  it('should return nothing when given nothing', function(){
+    should.not.exist(cangjie.fromCangjie());
+  });
+
 });
 

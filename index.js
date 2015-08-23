@@ -29,6 +29,7 @@ var cangjie = {
 
 function toCangjie(string) {
   var out = [];
+  if (!string) { return; }
   string.toUpperCase().split("").forEach(function(l){
     out.push( cangjie[l] || l );  
   });
@@ -37,6 +38,7 @@ function toCangjie(string) {
 
 function fromCangjie(string) {
   var out = [];
+  if (!string) { return; }
   string.split("").forEach(function(l){
     for (key in cangjie) {
       if (cangjie[key] == l) {
