@@ -1,7 +1,7 @@
 {
   "name": "zh-cangjie",
   "version": "0.1.0",
-  "description": "Convert strings to/from cangjie chars (人弓火 -> ONF / ONF -> 人>弓火) and convert chinese characters to/from cangjie (雨 -> 一中月卜/MLBY -> 雨)"
+  "description": "Convert strings to/from cangjie chars (人弓火 -> ONF / ONF -> 人>弓火) and convert chinese characters to/from cangjie (雨 -> 一中月卜/MLBY -> 雨)",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec"
