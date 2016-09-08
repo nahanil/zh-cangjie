@@ -1,5 +1,5 @@
 # zh-cangjie
-Node.js package to convert strings to/from cangjie chars (人弓火 -> ONF / ONF -> 人弓火)
+Node.js packate to convert strings to/from cangjie chars (人弓火 -> ONF / ONF -> 人>弓火) and convert chinese characters to/from cangjie (雨 -> 一中月卜/MLBY -> 雨)
 
 # Usage
 ````javascript
