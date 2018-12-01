@@ -1,0 +1,13 @@
+language: node_js
+
+node_js:
+  - "10"
+  - "8"
+  - "6"
+  - "0.10"
+  - "0.12"
+
+# whitelisted branches
+branches:
+  only:
+    - master
