@@ -1,4 +1,4 @@
-# zh-cangjie
+# zh-cangjie [![Build Status](https://travis-ci.org/texh/zh-cangjie.svg?branch=master)](https://travis-ci.org/texh/zh-cangjie)
 Node.js package to convert strings to/from cangjie chars (人弓火 -> ONF / ONF -> 人>弓火) and convert chinese characters to/from cangjie (雨 -> 一中月卜/MLBY -> 雨).
 Created for [hanzipal.com](https://hanzipal.com)
 
