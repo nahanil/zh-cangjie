@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && npm run test-unit-coverage",
-    "test-unit-coverage": "nyc -r html -r text mocha ./test",
+    "test-unit-coverage": "nyc -r html -r text mocha ./test/index.js",
     "lint": "eslint -c .eslintrc.js lib/**/*.js  && echo '  ✓ Checked files with eslint and everything looks alright!'"
   },
   "keywords": [
@@ -23,7 +23,8 @@
     "chai": "^3.5.0",
     "eslint": "^5.9.0",
     "mocha": "^5.2.0",
-    "nyc": "^13.1.0"
+    "nyc": "^13.1.0",
+    "semver": "^5.6.0"
   },
   "dependencies": {
     "machine": "^15.2.2",
