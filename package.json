@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && npm run test-unit-coverage",
-    "test-unit-coverage": "nyc -r html -r text mocha ./test/index.js",
+    "test-unit-coverage": "nyc -r html -r text mocha -c ./test/index.js",
     "lint": "eslint -c .eslintrc.js lib/**/*.js  && echo '  ✓ Checked files with eslint and everything looks alright!'"
   },
   "keywords": [
