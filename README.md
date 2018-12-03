@@ -60,6 +60,7 @@ cangjie.findCharacters("一中", function(err, found) {
 
 # Changes
 ### 4 December 2018 - 0.2.0-a
+  - Requires Node.js 8+ (asyn/await)
   - `.findCharacters()` replaces `.search()` and `.findCharacter()`
   - `findCharacters()` and `fromCharacter()` are `await`-able
 ### 9 September 2016 - 0.1.0
