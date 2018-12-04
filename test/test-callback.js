@@ -31,7 +31,6 @@ describe('#forCharacter.exec()', function() {
 });
 
 describe('#findCharacters.exec()', function() {
-
  it('should return [\'雨\'] when given \'MLBY\'', function(done) {
    cangjie.findCharacters('MLBY').exec(function(err, found){
      should.not.exist(err);

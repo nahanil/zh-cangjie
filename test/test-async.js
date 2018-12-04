@@ -25,7 +25,6 @@ describe('#findCharacters (async/await)', function() {
  it('should return [\'雨\'] when given \'MLBY\'', async function() {
    let found = await cangjie.findCharacters('MLBY');
    found.length.should.equal(1);
-   // So apparently .eql is 'deep compare'?
    found.should.eql(['雨']);
  });
 
@@ -80,8 +79,6 @@ describe('#findCharacters (async/await)', function() {
  it ('should allow disabling "partial" matching', async function(){
    let found = await cangjie.findCharacters('一中', false);
    found.length.should.equal(1);
-
-   // Check that this returns the expected characters
    found.should.contain('丌');
  });
 

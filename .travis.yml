@@ -3,8 +3,8 @@ language: node_js
 node_js:
   - "10"
   - "8"
-  # No longer supported :(
   - "6"
+  # nyc/mocha no longer supported.. 
   #- "0.10"
   #- "0.12"
 

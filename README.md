@@ -1,6 +1,8 @@
 # zh-cangjie [![Build Status](https://travis-ci.org/texh/zh-cangjie.svg?branch=master)](https://travis-ci.org/texh/zh-cangjie) [![npm version](https://badge.fury.io/js/zh-cangjie.svg)](https://www.npmjs.com/package/zh-cangjie)
-Node.js package to convert strings to/from cangjie chars (人弓火 -> ONF / ONF -> 人>弓火) and convert chinese characters to/from cangjie (雨 -> 一中月卜/MLBY -> 雨).
-Created for [hanzipal.com](https://hanzipal.com)
+- Convert strings to/from cangjie chars (人弓火 -> ONF || ONF -> 人弓火)
+- Convert chinese characters to/from cangjie (雨 -> 一中月卜 || MLBY -> 雨).
+
+Created for [zhdict.net](https://zhdict.net)
 
 # Usage
 ````javascript
@@ -33,18 +35,16 @@ cangjie.findCharacters("MLBY", function(err, found) {
   console.log(found);  // ['雨']
 });
 
-let found = await cangjie.findCharacter("一中月卜");
+let found = await cangjie.findCharacters("一中月卜");
 // - OR -
 cangjie.findCharacters("一中月卜", function(err, found) {
-  console.log(found);  
-  // ['雨']
+  console.log(found);  // ['雨']
 });
 
 let found = await cangjie.findCharacter("YWLV");
 // - OR -
 cangjie.findCharacters("YWLV", function(err, found) {
-  console.log(found);  
-  // ['褱', '還']
+  console.log(found);  // ['褱', '還']
 });
 
 
@@ -59,10 +59,10 @@ cangjie.findCharacters("一中", function(err, found) {
 ````
 
 # Changes
-### 4 December 2018 - 0.2.0-a
-  - Requires Node.js 8+ (asyn/await)
+### 4 December 2018 - 0.2.0
   - `.findCharacters()` replaces `.search()` and `.findCharacter()`
   - `findCharacters()` and `fromCharacter()` are `await`-able
+  - ~~Requires Node.js 8+ (async/await)~~
 ### 9 September 2016 - 0.1.0
   - Added ability to lookup cangjie for a given Chinese character (based on data from Unihan/Unicode Character Database
   - Added ability to search for characters based on a full or partial cangjie string (as either [A-Z]+ or cangjie 'radicals')
