@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npm run lint && npm run test-unit-coverage",
     "test-unit-coverage": "nyc -r html -r text mocha -c ./test/index.js",
-    "lint": "eslint -c .eslintrc.js lib/**/*.js  && echo '  ✓ Checked files with eslint and everything looks alright!'"
+    "lint": "eslint -c .eslintrc.js lib/**/*.js  && echo '  ✓ Checked files with eslint and everything looks alright!'",
+    "mpdoc": "rm -rf docs && mpdoc"
   },
   "keywords": [
     "cangjie",
@@ -23,6 +24,7 @@
     "chai": "^3.5.0",
     "eslint": "^5.9.0",
     "mocha": "^5.2.0",
+    "mpdoc": "git+https://git.carrotlabs.net/jarrod/mpdoc.git",
     "nyc": "^13.1.0",
     "semver": "^5.6.0"
   },

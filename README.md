@@ -1,6 +1,6 @@
 # zh-cangjie
 [![Build Status](https://travis-ci.org/texh/zh-cangjie.svg?branch=master)](https://travis-ci.org/texh/zh-cangjie)
-[![coverage report](https://git.carrotlabs.net/zhdict/zh-cangjie/badges/master/coverage.svg)](http://zhdict.pages.carrotlabs.net/zh-cangjie/)
+[![coverage report](https://git.carrotlabs.net/zhdict/zh-cangjie/badges/master/coverage.svg)](http://zhdict.pages.carrotlabs.net/zh-cangjie/coverage/)
 [![npm version](https://badge.fury.io/js/zh-cangjie.svg)](https://www.npmjs.com/package/zh-cangjie)
 
 - Convert strings to/from cangjie chars (人弓火 -> ONF || ONF -> 人弓火)

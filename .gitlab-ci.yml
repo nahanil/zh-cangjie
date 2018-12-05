@@ -9,17 +9,20 @@ test:
   script:
    - npm install
    - npm test
+   - npm run mpdoc
   # Extract coverage %age from Istanbull
   coverage: '/All\s+files\s+[|]\s+([\d.]+)/'
   artifacts:
     paths:
       - coverage/
+      - docs/
 
 # Deploy coverage reports
 pages:
   stage: deploy
   script:
-    - mv coverage/ public/
+    - mv docs/ public/
+    - mv coverage/ public/coverage
   artifacts:
     paths:
       - public
