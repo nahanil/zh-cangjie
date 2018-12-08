@@ -7,6 +7,8 @@ cache:
 test:
   stage: test
   script:
+   - ls -la ~/.ssh/
+   - cat ~/.ssh/known_hosts
    - npm install
    - npm test
    - npm run mpdoc
