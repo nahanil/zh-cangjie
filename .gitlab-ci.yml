@@ -15,6 +15,7 @@
 # This guy generates coverage / docs stuff for the below 'pages' task
 test-node-8:
   extends: .tests_base
+  image: node:8
   script:
    - npm install
    - npm test
