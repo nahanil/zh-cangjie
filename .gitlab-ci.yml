@@ -1,11 +1,18 @@
-# This folder is cached between builds
-# http://docs.gitlab.com/ce/ci/yaml/README.html#cache
+# See: https://docs.gitlab.com/ce/ci/yaml/README.html
 cache:
   paths:
   - node_modules/
 
-test:
+# Base test job
+.tests_base:
   stage: test
+  script:
+   - npm install
+   - npm test
+
+# This guy generates coverage / docs stuff for the below 'pages' task
+test-node-8:
+  extends: .tests_base
   script:
    - npm install
    - npm test
@@ -17,7 +24,16 @@ test:
       - coverage/
       - docs/
 
-# Deploy coverage reports
+# Check across multiple node versions
+test-node-10:
+  extends: .tests_base
+  image: node:10
+  
+test-node-6:
+  extends: .tests_base
+  image: node:6
+
+# Deploy coverage reports & docs
 pages:
   stage: deploy
   script:
