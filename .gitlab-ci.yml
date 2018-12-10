@@ -1,7 +1,4 @@
 # See: https://docs.gitlab.com/ce/ci/yaml/README.html
-cache:
-  paths:
-  - node_modules/
 
 # Base test job
 .tests_base:
@@ -9,6 +6,11 @@ cache:
   script:
    - npm install
    - npm test
+  cache:
+    # Per branch/job cache
+    key: "${CI_COMMIT_REF_SLUG}_${CI_JOB_NAME}"
+    paths:
+      - node_modules/
 
 # This guy generates coverage / docs stuff for the below 'pages' task
 test-node-8:
